@@ -35,3 +35,6 @@ What's not clear (If the response of [this api endpoint](https://starkscan.readm
 2. How we define "Loan" for which a python class should be created (this is especially unclear because the need is the update_state function, what does it do? update the state of individual loan? That makes no sense to me)
 
 In general, it is not clear to me what is expected to be done with such raw data.
+Which state is being updated from "Loan class"?
+
+The only thing that makes sense to me based on this is that we want to aggregate by asset in $.
