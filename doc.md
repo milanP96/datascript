@@ -37,4 +37,4 @@ What's not clear (If the response of [this api endpoint](https://starkscan.readm
 In general, it is not clear to me what is expected to be done with such raw data.
 Which state is being updated from "Loan class"?
 
-The only thing that makes sense to me based on this is that we want to aggregate by asset in $.
+The only thing that makes sense to me based on this is that we want to aggregate by asset in $. Is that right? (I don't think there is enough data or documentation for that)
