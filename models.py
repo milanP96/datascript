@@ -66,9 +66,19 @@ class Loan:
             self.borrowed[event.asset] -= event.face_amount
 
     def health(self):
-        # TODO implementation
-        """ calculating health (will be in the zklend docs)"""
-        pass
+        """
+        Risk-adjusted Collateral/Liabilities
+
+        Risk-adjusted Collateral:  Sum of the market value of a user's collateral discounted by each asset’s Collateral Factor
+        Liabilities: The sum of the market value of a user's outstanding borrowings and accrued interest
+        """
+        sum_state = self.sum_state()
+
+        if sum_state['borrowed'] == 0:
+            return "Notting borrowed, health not calculated"
+
+        return sum_state['deposit']/sum_state['borrowed']
+        # missing Collateral Factor Liabilities and accrued interest for borrowings
 
     def sum_state(self):
         prices = {

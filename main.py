@@ -85,5 +85,7 @@ if __name__ == '__main__':
         State per asset: 
             Deposit - {dict(sdk.state_of_loans[loan].deposits)} 
             Borrowed - {dict(sdk.state_of_loans[loan].borrowed)}
+        
+        Health: {sdk.state_of_loans[loan].health()}
         """)
 
